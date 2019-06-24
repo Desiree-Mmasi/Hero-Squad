@@ -10,7 +10,7 @@ public class App {
 
         get("/", (request, response) -> {
             Map<String, Object> model = new HashMap<String, Object>();
-            return new ModelAndView(model, "index.hbs");
+            return new ModelAndView(new HashMap(), "templates/layout.vtl");
         }, new VelocityTemplateEngine());
 
     }
