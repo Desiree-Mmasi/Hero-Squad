@@ -44,15 +44,6 @@ public class App {
         }, new VelocityTemplateEngine());
 
 
-
-
-//        get("/" ,(request, response) -> {
-//            Map<String,Object> model = new HashMap<String,Object>();
-//            model.put("template", "templates/index.vtl");
-//
-//        },new VelocityTemplateEngine());
-//
-
         post("/squad", (request, response) -> {
             Map<String, Object> model = new HashMap<String, Object>();
             ArrayList<Squad> squad =  request.session().attribute("squad");
