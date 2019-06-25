@@ -20,13 +20,15 @@ public class App {
             if (hero==null) {
                 hero= new ArrayList<Hero>();
                 request.session().attribute("hero",hero);
+
             }
 
             String inputtedHero = request.queryParams("hero");
             String inputtedAge = request.queryParams("age");
+            int age = Integer.parseInt(inputtedAge);
             String inputtedpower = request.queryParams("power");
             String inputtedweakness = request.queryParams("weakness");
-            Hero herol = new Hero();
+            Hero herol = new Hero(inputtedHero,age,inputtedpower,inputtedweakness);
             hero.add(herol);
             request.session().attribute("hero", hero);
             model.put("username", hero);
