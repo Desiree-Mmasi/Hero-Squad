@@ -1,4 +1,18 @@
-<a href="/">HOME</a>
+#if ($hero)
+#foreach ($hero in $hero)
 
+<div class="container>
+    <div class="card-deck">
+          <div class="card-body">
 
-<p>SUCCESSFULLY SAVED</p>
+  <a href="/hero"><p class="card-text" style="font-family: 'Poiret One', cursive;"><strong>$hero.getName()</strong></p></a>
+  <a href="/hero"><p class="card-text" style="font-family: 'Poiret One', cursive;"><strong>$hero.getAge()</strong></p></a>
+  <a href="/hero"><p class="card-text" style="font-family: 'Poiret One', cursive;"><strong>$hero.getPower()</strong></p></a>
+  <a href="/hero"><p class="card-text" style="font-family: 'Poiret One', cursive;"><strong>$hero.getWeakness()</strong></p></a>
+      </div>
+   </div>
+   </div>
+
+   #end
+   #else
+   <p style="font-family: 'Poiret One', cursive;"><strong>Please Input your Avatar</strong></p>
