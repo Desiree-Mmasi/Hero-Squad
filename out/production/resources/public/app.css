@@ -1,0 +1,13 @@
+#try {
+    font-family: 'Poiret One', cursive;
+    font-color: maroon;
+    font-size: 100px;
+}
+.container {
+    background-color: white;
+    font-family: 'Poiret One', cursive;
+}
+.card {
+    display: inline-block;
+    margin-left: 150px;
+}
