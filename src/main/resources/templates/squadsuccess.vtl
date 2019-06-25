@@ -1,22 +1,22 @@
-#if ($hero)
-#foreach ($hero in $hero)
+#if ($squad)
+#foreach ($squad in $squad)
 
 <div class="card text-white bg-info mb-3" style="width: 15rem; height: 15rem;">
 <div class="panel>
- <h5 class="card-title" style="font-family: 'Cutive Mono', monospace><strong><i>Avatar:</i></strong></h5>
+ <h5 class="card-title" style="font-family: 'Cutive Mono', monospace><strong><i>Squad Up:</i></strong></h5>
  </div>
   <div class="card-body">
 
-  <p class="card-text" style="font-family: 'Poiret One', cursive;">Name:  <strong>$hero.getName()</strong></p>
-  <p class="card-text" style="font-family: 'Poiret One', cursive;">Age:   <strong>$hero.getAge()</strong></p>
-  <p class="card-text" style="font-family: 'Poiret One', cursive;">Power:   <strong>$hero.getPower()</strong></p>
-  <p class="card-text" style="font-family: 'Poiret One', cursive;">Weakness:  <strong>$hero.getWeakness()</strong></p>
+  <p class="card-text" style="font-family: 'Poiret One', cursive;">Squad Name:  <strong>$squad.getName()</strong></p>
+  <p class="card-text" style="font-family: 'Poiret One', cursive;">Squad Number:   <strong>$hero.getNumber()</strong></p>
+  <p class="card-text" style="font-family: 'Poiret One', cursive;">Squad Mission:   <strong>$hero.getMission()</strong></p>
+
 
      </div>
      </div>
    #end
    <br>
    #else
-   <p style="font-family: 'Poiret One', cursive;"><strong>Please Input your Avatar</strong></p>
+   <p style="font-family: 'Poiret One', cursive;"><strong>Please Form Your Squad</strong></p>
 
 #end

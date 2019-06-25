@@ -65,7 +65,7 @@ public class App {
             Squad squads = new Squad(inputtedName,number,inputtedMission);
             squad.add(squads);
             model.put("squad", squad);
-            model.put("template", "templates/squadform.vtl");
+            model.put("template", "templates/squadsuccess.vtl");
             return new ModelAndView(model, layout);
         }, new VelocityTemplateEngine());
 
