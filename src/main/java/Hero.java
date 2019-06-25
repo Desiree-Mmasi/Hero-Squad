@@ -1,38 +1,33 @@
-
-
 public class Hero {
-    private String name;
-    private Integer age;
-    private String Power;
-    private String Weakness;
+    private String mName;
+    private int mAge;
+    private String mPower;
+    private String mWeakness;
 
-    public Hero (String name, Integer age, String power, String weakness) {
-        this.name = name;
-        this.age = age;
-        Power = power;
-        Weakness = weakness;
+    public Hero (String name, int age, String power, String weakness) {
+        mName = name;
+        mAge = age;
+        mPower = power;
+        mWeakness = weakness;
     }
 
 
 
-    public String getWeakness () {
-        return Weakness;
+    public String getWeakness(){
+        return mWeakness;
     }
 
-    public String getPower () {
-        return Power;
+    public String getPower() {
+        return mPower;
     }
 
-    public Integer getAge () {
-        return age;
+    public int getAge() {
+        return mAge;
     }
 
 
-    public String getName () {
-        return name;
-    }
+    public String getName() {
+        return mName;
 
-    public Hero (String name) {
-        this.name = name;
     }
 }

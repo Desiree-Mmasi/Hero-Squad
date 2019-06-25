@@ -27,11 +27,10 @@ public class App {
             String inputtedHero = request.queryParams("hero");
             String inputtedAge = request.queryParams("age");
             int age = Integer.parseInt(inputtedAge);
-            String inputtedpower = request.queryParams("power");
-            String inputtedweakness = request.queryParams("weakness");
-            Hero herol = new Hero(inputtedHero,age,inputtedpower,inputtedweakness);
+            String inputtedPower = request.queryParams("power");
+            String inputtedWeakness = request.queryParams("weakness");
+            Hero herol = new Hero(inputtedHero,age,inputtedPower,inputtedWeakness);
             hero.add(herol);
-            request.session().attribute("hero", hero);
             model.put("hero", hero);
             model.put("template", "templates/success.vtl");
             return new ModelAndView(model, layout);
