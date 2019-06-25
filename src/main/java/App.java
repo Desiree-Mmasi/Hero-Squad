@@ -44,10 +44,34 @@ public class App {
         }, new VelocityTemplateEngine());
 
 
-        get("/view", (request, response) -> {
-            Map<String, Object> model = new HashMap<String, Object>();
-            model.put("template","templates/hero.vtl");
-            return new ModelAndView(model,layout );
+
+
+        get("/" ,(request, response) -> {
+            Map<String,Object> model = new HashMap<String,Object>();
+            model.put("template", "templates/index.vtl");
+            return  new ModelAndView(model, layout);
         },new VelocityTemplateEngine());
+
+
+        post("/squads", (request, respsonse) -> {
+            Map<String, Object> model = new HashMap<String, Object>();
+            ArrayList<Squad> squad =  request.session().attribute("squad");
+            if (squad==null) {
+                squad= new ArrayList<Squad>();
+                request.session().attribute("squad",squad);
+            }
+            String inputtedName = request.queryParams("name");
+            String inputtedNumber = request.queryParams("number");
+            int number = Integer.parseInt(inputtedNumber);
+            String inputtedMission = request.queryParams("mission");
+
+            Squad squads = new Squad(inputtedName,number,inputtedMission);
+            squad.add(squads);
+            model.put("squad", squad);
+            return new ModelAndView(model, layout);
+        }, new VelocityTemplateEngine());
+
+
+
     }
 }

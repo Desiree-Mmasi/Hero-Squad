@@ -1,20 +1,20 @@
 public class Squad {
     private String mName;
-    private Integer mMaxsize;
+    private int mNumber;
     private String mMission;
 
 
     public Squad (String name, Integer maxsize, String mission) {
        mName = name;
-       mMaxsize = maxsize;
+       mNumber = maxsize;
        mMission = mission;
     }
     public String get () {
         return mName;
     }
 
-    public Integer getMaxsize () {
-        return mMaxsize;
+    public int getMaxsize () {
+        return mNumber;
     }
 
     public String getMission () {
