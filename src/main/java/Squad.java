@@ -9,11 +9,11 @@ public class Squad {
        mNumber = maxsize;
        mMission = mission;
     }
-    public String get () {
+    public String getName () {
         return mName;
     }
 
-    public int getMaxsize () {
+    public int getNumber () {
         return mNumber;
     }
 
