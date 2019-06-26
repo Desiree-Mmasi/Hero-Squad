@@ -1,0 +1,23 @@
+
+#if ($squad)
+#foreach ($squad in $squad)
+
+<div class="card text-white bg-info mb-3" style="width: 15rem; height: 10rem;">
+<div class="panel>
+ <h5 class="card-title" style="font-family: 'Cutive Mono', monospace><strong><i>Squad Up:</i></strong></h5>
+ </div>
+  <div class="card-body">
+
+  <p class="card-text" style="font-family: 'Poiret One', cursive;">Squad Name:  <strong>$squad.getName()</strong></p>
+  <p class="card-text" style="font-family: 'Poiret One', cursive;">Squad Number:   <strong>$squad.getNumber()</strong></p>
+  <p class="card-text" style="font-family: 'Poiret One', cursive;">Squad Mission:   <strong>$squad.getMission()</strong></p>
+
+
+     </div>
+     </div>
+   #end
+   <br>
+   #else
+   <p style="font-family: 'Poiret One', cursive;"><strong>Please Form Your Squad</strong></p>
+
+#end

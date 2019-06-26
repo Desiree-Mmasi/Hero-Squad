@@ -17,14 +17,8 @@ public class App {
 
         port(port);
         staticFileLocation("/public");
-
         staticFileLocation("/public");
         String layout = "templates/layout.vtl";
-
-
-
-
-
 
 
         get("/" ,(request, response) -> {
